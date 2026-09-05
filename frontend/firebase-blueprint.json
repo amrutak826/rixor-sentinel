@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User profile document with role and identity metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["analyst", "admin"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "UserCase": {
+      "title": "User Investigation Case",
+      "description": "Fraud cases investigated or updated with analyst decisions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "ringId": { "type": "string" },
+        "title": { "type": "string" },
+        "priority": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM"] },
+        "status": { "type": "string", "enum": ["NEW", "INVESTIGATING", "RESOLVED"] },
+        "totalVolume": { "type": "number" },
+        "totalTransactions": { "type": "number" },
+        "userId": { "type": "string" },
+        "decisionAction": { "type": "string", "enum": ["ALLOW", "HOLD", "BLOCK", "NONE"] },
+        "decisionReason": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "priority", "status", "userId"]
+    },
+    "UserPolicy": {
+      "title": "User Fraud Policy Configuration",
+      "description": "Custom risk score threshold tuning and weights saved by analyst",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "reviewThreshold": { "type": "number" },
+        "holdThreshold": { "type": "number" },
+        "blockThreshold": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "reviewThreshold", "holdThreshold", "blockThreshold"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile data accessible only by the owner"
+    },
+    "/users/{userId}/cases/{caseId}": {
+      "schema": "UserCase",
+      "description": "Analyst cases stored per user"
+    },
+    "/users/{userId}/policy/{policyId}": {
+      "schema": "UserPolicy",
+      "description": "Policy threshold settings stored per user"
+    }
+  }
+}

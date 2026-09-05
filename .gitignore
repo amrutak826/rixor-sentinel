@@ -1,0 +1,31 @@
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+build/
+coverage/
+*.log
+.DS_Store
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated ML artifacts / datasets
+backend/app/artifacts/*.pkl
+backend/ml/data/
+*.csv
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
