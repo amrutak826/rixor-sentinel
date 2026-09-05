@@ -9,7 +9,7 @@
 
 Experience the deployed Rixor Sentinel platform:
 
-**[Open Rixor Sentinel Live Demo →](https://rixor-netlify.ai.studio/)**
+**[Open Rixor Live Demo →](https://rixor.netlify.app/)**
 
 *Trace the connections. Expose the risk.*
 
