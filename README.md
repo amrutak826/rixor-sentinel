@@ -5,6 +5,13 @@
 ### Real-Time Graph Intelligence for Coordinated Payment Fraud & Sybil Attacks
 
 **Detect the ring. Explain the risk. Contain the attack.**
+## 🚀 Live Demo
+
+Experience the deployed Rixor Sentinel platform:
+
+**[Open Rixor Sentinel Live Demo →](https://rixor-netlify.ai.studio/)**
+
+*Trace the connections. Expose the risk.*
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
