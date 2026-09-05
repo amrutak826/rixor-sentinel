@@ -1,13 +1,13 @@
 <div align="center">
 
-# RIXOR SENTINEL
+# RIXOR 
 
 ### Real-Time Graph Intelligence for Coordinated Payment Fraud & Sybil Attacks
 
 **Detect the ring. Explain the risk. Contain the attack.**
 ## 🚀 Live Demo
 
-Experience the deployed Rixor Sentinel platform:
+Experience the deployed Rixor platform:
 
 **[Open Rixor Live Demo →](https://rixor.netlify.app/)**
 
@@ -21,8 +21,7 @@ Experience the deployed Rixor Sentinel platform:
 [![XGBoost](https://img.shields.io/badge/XGBoost-ML-EC6B23)](https://xgboost.readthedocs.io/)
 [![License](https://img.shields.io/badge/License-Buildathon-lightgrey)](#)
 
-**Rixor Sentinel** is a graph-first fraud intelligence platform designed for payment ecosystems where coordinated attackers can evade transaction-by-transaction rules.
-
+**Rixor** is an AI-powered graph intelligence for detecting coordinated financial fraud, turning hidden transaction relationships into actionable risk intelligence.
 </div>
 
 ---
@@ -47,7 +46,7 @@ Rixor turns those relationships into:
 
 ## ⚡ What the demo shows
 
-| Capability | What a judge can see |
+| Capability | What a users can see |
 |---|---|
 | **Live ingestion** | Payment-style webhook enters the risk pipeline |
 | **Graph intelligence** | Shared devices, IPs and instruments connect entities |
